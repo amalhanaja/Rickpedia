@@ -45,7 +45,7 @@ Using the above modularization strategy, the Rickpedia app has the following mod
 
 **Rickpedia** is a based on the MVVM architecture and the Repository pattern which follows the [Guide to app architecture](https://developer.android.com/topic/architecture)
 
-#### Overview
+### Overview
 
 The app architecture has two layers: a data layer and a UI layer.
 
@@ -61,7 +61,7 @@ The architecture follows a reactive programming model with unidirectional data f
 
 With this loosely coupled architecture we can uncrease the reusability of components and scalability of our apps.
 
-#### UI Layer
+### UI Layer
 
 ![UI Layer](docs/images/ui-layer.png)
 
