@@ -6,7 +6,7 @@
 
 ---
 
-<img src="file:///Users/amalhanaja/Documents/Projects/Rickpedia/docs/images/modularization.png" title="" alt="modularization" data-align="center">
+<img src="docs/images/modularization.png" title="" alt="modularization" data-align="center">
 
 **Rickpedia** adopted modularization strategies below:
 
