@@ -1,10 +1,6 @@
 # Rickpedia
 
----
-
 ## Modularization
-
----
 
 <img src="docs/images/modularization.png" title="" alt="modularization" data-align="center">
 
@@ -32,8 +28,6 @@ For further information, check out the [Guide to Android app modularization](htt
 
 ## Modules
 
----
-
 Using the above modularization strategy, the Rickpedia app has the following modules
 
 | Name                 | Responsibility                                                                                                        |
@@ -48,8 +42,6 @@ Using the above modularization strategy, the Rickpedia app has the following mod
 | `:core:database`     | Local database storage                                                                                                |
 
 ## Architecture
-
----
 
 **Rickpedia** isa based on the MVVM architecture and the Repository pattern which follows the [Guide to app architecture](https://developer.android.com/topic/architecture)
 
