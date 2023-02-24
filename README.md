@@ -2,7 +2,7 @@
 
 ## Modularization
 
-<img src="docs/images/modularization.png" title="" alt="modularization" data-align="center">
+![modularization](docs/images/modularization.png)
 
 **Rickpedia** adopted modularization strategies below:
 
@@ -43,6 +43,40 @@ Using the above modularization strategy, the Rickpedia app has the following mod
 
 ## Architecture
 
-**Rickpedia** isa based on the MVVM architecture and the Repository pattern which follows the [Guide to app architecture](https://developer.android.com/topic/architecture)
+**Rickpedia** is a based on the MVVM architecture and the Repository pattern which follows the [Guide to app architecture](https://developer.android.com/topic/architecture)
 
-TBD
+#### Overview
+
+The app architecture has two layers: a data layer and a UI layer.
+
+![High Level Architecture](docs/images/hla.png)
+
+The architecture follows a reactive programming model with unidirectional data flow.
+
+- Higher layers react to changes in lower layers
+
+- Events flow down
+
+- Data flows up
+
+With this loosely coupled architecture we can uncrease the reusability of components and scalability of our apps.
+
+#### UI Layer
+
+![UI Layer](docs/images/ui-layer.png)
+
+The UI Layer includes:
+
+- UI Elements built using Jetpack Compose.
+
+- Android ViewModel that holds UI state and restore data when configuration changes.
+
+ViewModels receive data streams from repositories and transform them into UI state. The UI elements should reflect this state and allow the user to interact with the app. These interactions are passed as action to the ViewModel, which processes them.
+
+### Data Layer
+
+![Data Layer](docs/images/data-layer.png)
+
+The data layer is implemented as offline-first of app adata and business logic. It is the source of truth for all data in the app.
+
+For Furter information, check out the [Build an offline-first app](https://developer.android.com/topic/architecture/data-layer/offline-first).
