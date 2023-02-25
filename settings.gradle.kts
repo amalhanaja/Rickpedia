@@ -1,5 +1,8 @@
 @file:Suppress("UnstableApiUsage")
 
+include(":core:desigsystem")
+
+
 pluginManagement {
     includeBuild("build-logic")
     repositories {
