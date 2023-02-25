@@ -1,8 +1,5 @@
 @file:Suppress("UnstableApiUsage")
 
-include(":core:desigsystem")
-
-
 pluginManagement {
     includeBuild("build-logic")
     repositories {
@@ -27,5 +24,8 @@ dependencyResolutionManagement {
         maven(url = "https://jitpack.io")
     }
 }
+
 rootProject.name = "Rickpedia"
+
+include(":core:designsystem")
 include(":app")

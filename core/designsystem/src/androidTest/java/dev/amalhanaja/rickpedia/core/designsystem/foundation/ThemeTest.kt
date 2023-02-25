@@ -1,4 +1,4 @@
-package dev.amalhanaja.rickpedia.core.desigsystem.foundation
+package dev.amalhanaja.rickpedia.core.designsystem.foundation
 
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme

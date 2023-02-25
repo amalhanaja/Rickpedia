@@ -1,4 +1,4 @@
-package dev.amalhanaja.rickpedia.core.desigsystem.foundation
+package dev.amalhanaja.rickpedia.core.designsystem.foundation
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf

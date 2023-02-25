@@ -3,5 +3,5 @@ plugins {
 }
 
 android {
-    namespace = "dev.amalhanaja.rickpedia.core.desigsystem"
+    namespace = "dev.amalhanaja.rickpedia.core.designsystem"
 }
