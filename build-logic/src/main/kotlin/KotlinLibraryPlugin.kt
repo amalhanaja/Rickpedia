@@ -6,7 +6,11 @@ import org.gradle.api.Project
 class KotlinLibraryPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            pluginManager.applyPlugins("kotlin", "rickpedia.jacoco")
+            pluginManager.applyPlugins(
+                "kotlin",
+                "rickpedia.jacoco",
+                "rickpedia.ktlint",
+            )
             configureKotlin()
         }
     }

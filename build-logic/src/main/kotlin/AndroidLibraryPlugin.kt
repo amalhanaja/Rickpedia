@@ -15,7 +15,8 @@ class AndroidLibraryPlugin : Plugin<Project> {
         pluginManager.applyPlugins(
             libsVersionCatalog.getPluginId("android.library"),
             libsVersionCatalog.getPluginId("kotlin.android"),
-            "rickpedia.jacoco"
+            "rickpedia.jacoco",
+            "rickpedia.ktlint",
         )
         findCommonExtension()?.apply {
             configureAndroid(this)

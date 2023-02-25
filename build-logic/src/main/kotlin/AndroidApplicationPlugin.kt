@@ -17,6 +17,7 @@ class AndroidApplicationPlugin : Plugin<Project> {
             pluginManager.applyPlugins(
                 libsVersionCatalog.getPluginId("android.application"),
                 libsVersionCatalog.getPluginId("kotlin.android"),
+                "rickpedia.ktlint",
             )
 
             findCommonExtension()?.apply {

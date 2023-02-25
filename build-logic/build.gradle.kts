@@ -10,6 +10,7 @@ java {
 dependencies {
     compileOnly(libs.gradle.plugin.android)
     compileOnly(libs.gradle.plugin.kotlin)
+    compileOnly(libs.gradle.plugin.ktlint)
 }
 
 gradlePlugin {
@@ -41,6 +42,10 @@ gradlePlugin {
         register("jacocoMergeReports") {
             id = "rickpedia.jacoco.merge.report"
             implementationClass = "JacocoMergeAllReportPlugin"
+        }
+        register("ktlint") {
+            id = "rickpedia.ktlint"
+            implementationClass = "KtlintPlugin"
         }
     }
 }
