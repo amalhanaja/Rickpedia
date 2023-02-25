@@ -2,13 +2,10 @@ import configurator.configureAndroid
 import configurator.configureKotlin
 import helper.applyPlugins
 import helper.findCommonExtension
-import helper.getLibraryProvider
 import helper.getPluginId
-import helper.implementation
 import helper.libsVersionCatalog
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.dependencies
 
 class AndroidLibraryPlugin : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
@@ -22,9 +19,5 @@ class AndroidLibraryPlugin : Plugin<Project> {
             configureAndroid(this)
         }
         configureKotlin()
-
-        dependencies {
-            implementation(libsVersionCatalog.getLibraryProvider("androidx.core"))
-        }
     }
 }

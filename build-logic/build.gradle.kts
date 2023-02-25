@@ -19,6 +19,10 @@ gradlePlugin {
             id = "rickpedia.android.application"
             implementationClass = "AndroidApplicationPlugin"
         }
+        register("androidHilt") {
+            id = "rickpedia.android.hilt"
+            implementationClass = "AndroidHiltPlugin"
+        }
         register("kotlinLibrary") {
             id = "rickpedia.kotlin.library"
             implementationClass = "KotlinLibraryPlugin"
