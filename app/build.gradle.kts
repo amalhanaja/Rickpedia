@@ -48,6 +48,7 @@ android {
 
 dependencies {
 
+    implementation(project(":core:designsystem"))
     implementation(libs.androidx.core)
     implementation(libs.lifecycle.compose)
     implementation(libs.compose.activity)
