@@ -1,6 +1,7 @@
 package dev.amalhanaja.rickpedia.core.model
 
 data class Character(
+    val id: Int,
     val name: String,
     val status: CharacterStatus,
     val species: String,

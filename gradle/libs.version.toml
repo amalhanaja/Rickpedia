@@ -61,6 +61,11 @@ ktlint-gradle-plugin = "11.2.0"
 ktlint = "0.48.2"
 # endregion
 
+# region paging3
+paging3 = "3.1.1"
+paging3-compose = "1.0.0-alpha18"
+# endregion
+
 secrets = "2.0.1"
 
 
@@ -120,6 +125,13 @@ room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 room-paging3 = { module = "androidx.room:room-paging", version.ref = "room" }
 room-testing = { module = "androidx.room:room-testing", version.ref = "room" }
+# endregion
+
+# region paging
+paging3-runtime = { module = "androidx.paging:paging-runtime", version.ref = "paging3" }
+paging3-common = { module = "androidx.paging:paging-common", version.ref = "paging3" }
+paging3-compose = { module = "androidx.paging:paging-compose", version.ref = "paging3-compose" }
+
 # endregion
 
 # region build logic dependency
