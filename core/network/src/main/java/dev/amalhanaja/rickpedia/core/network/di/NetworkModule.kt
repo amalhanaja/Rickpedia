@@ -1,11 +1,14 @@
 package dev.amalhanaja.rickpedia.core.network.di
 
 import com.google.gson.Gson
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import dev.amalhanaja.rickpedia.core.network.BuildConfig
+import dev.amalhanaja.rickpedia.core.network.RickpediaNetworkDataSource
+import dev.amalhanaja.rickpedia.core.network.api.RickpediaApiClient
 import okhttp3.Call
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -13,7 +16,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class NetworkModule {
+interface NetworkModule {
 
     @Provides
     @Singleton
@@ -36,4 +39,8 @@ class NetworkModule {
             )
             .build()
     }
+
+    @Singleton
+    @Binds
+    fun bindsRickpediaApiClient(networkApiClient: RickpediaApiClient): RickpediaNetworkDataSource
 }
