@@ -21,7 +21,6 @@ class RickpediaPreferenceDataStore @Inject constructor(
     override suspend fun setAllCharacterNextPage(nextPage: Int) {
         dataStore.edit { mutablePreferences ->
             mutablePreferences[KEY_ALL_CHARACTER_NEXT_PAGE] = nextPage
-
         }
     }
 }

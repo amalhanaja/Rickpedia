@@ -7,5 +7,4 @@ interface RickpediaPreferenceDataSource {
     val allCharacterNextPage: Flow<Int?>
 
     suspend fun setAllCharacterNextPage(nextPage: Int)
-
 }

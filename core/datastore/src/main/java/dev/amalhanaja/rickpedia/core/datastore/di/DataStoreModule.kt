@@ -25,5 +25,4 @@ class DataStoreModule {
             produceFile = { context.dataStoreFile(RICKPEDIA_PREFERENCE_NAME) },
         )
     }
-
 }
