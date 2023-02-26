@@ -10,6 +10,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
 private const val RICKPEDIA_PREFERENCE_NAME = "rickpedia.preferences_pb"
 
@@ -18,6 +19,7 @@ private const val RICKPEDIA_PREFERENCE_NAME = "rickpedia.preferences_pb"
 class DataStoreModule {
 
     @Provides
+    @Singleton
     fun providePreferencesDataStore(
         @ApplicationContext context: Context,
     ): DataStore<Preferences> {

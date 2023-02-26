@@ -16,13 +16,18 @@ fun Project.configureKotlin() {
             // Compiler Arguments
             freeCompilerArgs = freeCompilerArgs + listOf(
                 "-opt-in=kotlin.RequiresOptIn",
-                "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
-                "-opt-in=androidx.compose.material.ExperimentalMaterialApi",
                 // Enable experimental coroutines APIs, including Flow
                 "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
                 "-opt-in=kotlinx.coroutines.FlowPreview",
                 "-opt-in=kotlin.Experimental",
+
+                // Enable compose experimental APIs, including material and animation
+                "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
+                "-opt-in=androidx.compose.material.ExperimentalMaterialApi",
                 "-opt-in=androidx.compose.animation.ExperimentalAnimationApi",
+
+                // Enable paging experimental APIs
+                "-opt-in=androidx.paging.ExperimentalPagingApi",
             )
 
         }

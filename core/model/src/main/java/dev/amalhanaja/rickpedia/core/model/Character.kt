@@ -3,12 +3,12 @@ package dev.amalhanaja.rickpedia.core.model
 data class Character(
     val id: Int,
     val name: String,
-    val status: CharacterStatus,
+    val status: String,
     val species: String,
     val subSpecies: String,
     val gender: String,
-    val origin: Origin,
-    val location: Location,
+    val origin: String,
+    val location: String,
     val image: String,
     val episodeIds: List<Int>,
 )

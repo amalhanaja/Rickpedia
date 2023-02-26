@@ -9,16 +9,20 @@ import dev.amalhanaja.rickpedia.core.network.BuildConfig
 import okhttp3.Call
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 class NetworkModule {
+
     @Provides
+    @Singleton
     fun provideGson(): Gson {
         return Gson()
     }
 
     @Provides
+    @Singleton
     fun provideOkHttpCallFactory(): Call.Factory {
         return OkHttpClient.Builder()
             .addInterceptor(
