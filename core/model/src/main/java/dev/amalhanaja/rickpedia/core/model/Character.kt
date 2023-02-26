@@ -9,5 +9,5 @@ data class Character(
     val origin: Origin,
     val location: Location,
     val image: String,
-    val episodes: List<Int>,
+    val episodeIds: List<Int>,
 )
