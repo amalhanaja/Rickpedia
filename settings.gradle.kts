@@ -27,6 +27,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Rickpedia"
 
+include(":core:datastore")
 include(":core:model")
 include(":core:data")
 include(":core:database")

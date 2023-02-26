@@ -67,7 +67,7 @@ paging3-compose = "1.0.0-alpha18"
 # endregion
 
 secrets = "2.0.1"
-
+datastore = '1.0.0'
 
 [libraries]
 # region testing
@@ -131,7 +131,11 @@ room-testing = { module = "androidx.room:room-testing", version.ref = "room" }
 paging3-runtime = { module = "androidx.paging:paging-runtime", version.ref = "paging3" }
 paging3-common = { module = "androidx.paging:paging-common", version.ref = "paging3" }
 paging3-compose = { module = "androidx.paging:paging-compose", version.ref = "paging3-compose" }
+# endregion
 
+# region datastore
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+datastore-preferences-core = { module = "androidx.datastore:datastore-preferences-core", version.ref = "datastore" }
 # endregion
 
 # region build logic dependency
