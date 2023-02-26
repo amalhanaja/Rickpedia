@@ -7,4 +7,5 @@ plugins {
     alias(libs.plugins.hilt) apply false
     alias(libs.plugins.ktlint) apply false
     id("rickpedia.jacoco.merge.report")
+    alias(libs.plugins.secrets) apply false
 }

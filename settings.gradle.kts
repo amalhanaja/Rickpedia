@@ -27,5 +27,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Rickpedia"
 
+include(":core:network")
 include(":core:designsystem")
 include(":app")
