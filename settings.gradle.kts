@@ -1,7 +1,5 @@
 @file:Suppress("UnstableApiUsage")
 
-include(":core:database")
-
 
 pluginManagement {
     includeBuild("build-logic")
@@ -30,6 +28,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "Rickpedia"
 
+include(":core:data")
+include(":core:database")
 include(":core:network")
 include(":core:designsystem")
 include(":app")
