@@ -29,7 +29,7 @@ android {
             major = major,
             minor = minor,
             patch = patch,
-            buildNumber = TimeUnit.MILLISECONDS.toMinutes(System.currentTimeMillis())
+            buildNumber = TimeUnit.MILLISECONDS.toMinutes(System.currentTimeMillis()),
         )
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
