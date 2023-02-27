@@ -44,8 +44,8 @@ class CharacterRemoteMediator(
                 }.flatten(),
             )
             MediatorResult.Success(false)
-        } catch (e: Exception) {
-            MediatorResult.Error(e)
+        } catch (t: Throwable) {
+            MediatorResult.Error(t)
         }
     }
 }

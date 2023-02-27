@@ -19,7 +19,7 @@ private const val RICKPEDIA_PREFERENCE_NAME = "rickpedia.preferences_pb"
 
 @Module
 @InstallIn(SingletonComponent::class)
-interface DataStoreModule {
+class DataStoreModule {
 
     @Provides
     @Singleton
@@ -30,7 +30,11 @@ interface DataStoreModule {
             produceFile = { context.dataStoreFile(RICKPEDIA_PREFERENCE_NAME) },
         )
     }
+}
 
+@Module
+@InstallIn(SingletonComponent::class)
+interface DataStoreBinderModule {
     @Binds
-    fun bindPreferenceDataStore(dataStore: RickpediaPreferenceDataStore): RickpediaPreferenceDataSource
+    abstract fun bindPreferenceDataStore(dataStore: RickpediaPreferenceDataStore): RickpediaPreferenceDataSource
 }

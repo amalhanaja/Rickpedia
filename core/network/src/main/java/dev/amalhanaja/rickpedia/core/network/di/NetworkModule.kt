@@ -16,7 +16,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-interface NetworkModule {
+class NetworkModule {
 
     @Provides
     @Singleton
@@ -39,8 +39,14 @@ interface NetworkModule {
             )
             .build()
     }
+}
+
+@Module
+@InstallIn(SingletonComponent::class)
+interface NetworkBinderModule {
 
     @Singleton
     @Binds
     fun bindsRickpediaApiClient(networkApiClient: RickpediaApiClient): RickpediaNetworkDataSource
+
 }
