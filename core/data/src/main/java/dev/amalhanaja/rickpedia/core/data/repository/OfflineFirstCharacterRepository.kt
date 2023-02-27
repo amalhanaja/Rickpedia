@@ -3,8 +3,7 @@ package dev.amalhanaja.rickpedia.core.data.repository
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
-import androidx.paging.map
-import dev.amalhanaja.rickpedia.core.data.mapper.toCharacter
+import dev.amalhanaja.rickpedia.core.data.mapper.toPagingDataCharacter
 import dev.amalhanaja.rickpedia.core.data.paging.CharacterRemoteMediator
 import dev.amalhanaja.rickpedia.core.database.dao.CharacterDao
 import dev.amalhanaja.rickpedia.core.datastore.RickpediaPreferenceDataSource
@@ -30,8 +29,6 @@ class OfflineFirstCharacterRepository @Inject constructor(
                 preferenceDataSource,
             ),
             pagingSourceFactory = { characterDao.getAllCharacter() },
-        ).flow.map { data ->
-            data.map { it.toCharacter() }
-        }
+        ).flow.map { data -> data.toPagingDataCharacter() }
     }
 }

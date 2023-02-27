@@ -1,5 +1,7 @@
 package dev.amalhanaja.rickpedia.core.data.mapper
 
+import androidx.paging.PagingData
+import androidx.paging.map
 import dev.amalhanaja.rickpedia.core.database.entity.CharacterEntity
 import dev.amalhanaja.rickpedia.core.database.entity.CharacterWithEpisodeIdsEntity
 import dev.amalhanaja.rickpedia.core.model.Character
@@ -46,3 +48,7 @@ fun CharacterEntity.toCharacter(episodeIds: List<Int>): Character = Character(
 )
 
 fun CharacterWithEpisodeIdsEntity.toCharacter(): Character = character.toCharacter(characterEpisodeCrossRefEntity.map { it.episodeId })
+
+fun PagingData<CharacterWithEpisodeIdsEntity>.toPagingDataCharacter(): PagingData<Character> {
+    return map { it.toCharacter() }
+}
