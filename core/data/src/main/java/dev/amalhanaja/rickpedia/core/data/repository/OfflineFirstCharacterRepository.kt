@@ -12,9 +12,11 @@ import dev.amalhanaja.rickpedia.core.network.RickpediaNetworkDataSource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
+import javax.inject.Singleton
 
 private const val CHARACTER_PAGE_SIZE = 20
 
+@Singleton
 class OfflineFirstCharacterRepository @Inject constructor(
     private val networkDataSource: RickpediaNetworkDataSource,
     private val preferenceDataSource: RickpediaPreferenceDataSource,
