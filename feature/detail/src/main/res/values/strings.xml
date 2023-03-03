@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_episodes">Episodes</string>
+    <string name="text_status">Status</string>
+    <string name="text_species">Species</string>
+    <string name="text_location">Location</string>
+    <string name="text_origin">Origin</string>
+    <string name="text_airDate">Air Date : %s</string>
+</resources>

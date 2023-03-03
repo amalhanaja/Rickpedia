@@ -28,6 +28,7 @@ fun Project.configureKotlin() {
 
                 // Enable paging experimental APIs
                 "-opt-in=androidx.paging.ExperimentalPagingApi",
+                "-opt-in=androidx.compose.foundation.ExperimentalFoundationApi",
             )
 
         }

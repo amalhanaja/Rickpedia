@@ -50,7 +50,9 @@ android {
 dependencies {
 
     implementation(project(":feature:home"))
+    implementation(project(":feature:detail"))
     implementation(project(":core:designsystem"))
+    implementation(project(":core:model"))
     implementation(libs.androidx.core)
     implementation(libs.lifecycle.compose)
     implementation(libs.compose.activity)

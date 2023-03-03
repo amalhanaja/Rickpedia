@@ -31,30 +31,42 @@ import dev.amalhanaja.rickpedia.core.model.Character
 @Composable
 internal fun HomeRoute(
     homeViewModel: HomeViewModel,
+    onClickCharacter: (Character) -> Unit,
 ) {
     val lazyPagingItems = homeViewModel.charactersPagingData.collectAsLazyPagingItems()
-    HomeScreen(characterPagingItems = lazyPagingItems)
+    HomeScreen(characterPagingItems = lazyPagingItems, onClickCharacter = onClickCharacter)
 }
 
 @Composable
-private fun HomeScreen(characterPagingItems: LazyPagingItems<Character>) {
+private fun HomeScreen(
+    characterPagingItems: LazyPagingItems<Character>,
+    onClickCharacter: (Character) -> Unit,
+) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
     ) {
-        itemsIndexed(items = characterPagingItems, key = { _, c -> c.id }) { i, c ->
-            CharacterComponent(character = c, modifier = Modifier.padding(RickpediaTheme.spacings.s))
+        itemsIndexed(items = characterPagingItems, key = { _, c -> c.id }) { _, c ->
+            CharacterComponent(
+                modifier = Modifier.padding(RickpediaTheme.spacings.s),
+                character = c,
+                onClick = { onClickCharacter(c) },
+            )
         }
     }
 }
 
 @Composable
-private fun CharacterComponent(modifier: Modifier = Modifier, character: Character) {
+private fun CharacterComponent(
+    modifier: Modifier = Modifier,
+    character: Character,
+    onClick: () -> Unit,
+) {
     val statusBgColor = when (character.status) {
         "Alive" -> RickpediaTheme.colorScheme.primary
         "Dead" -> RickpediaTheme.colorScheme.error
         else -> RickpediaTheme.colorScheme.secondary
     }
-    Card(modifier = modifier) {
+    Card(modifier = modifier, onClick = onClick) {
         ConstraintLayout(modifier = Modifier.fillMaxSize()) {
             val (imageRef, statusRef, infoRef) = createRefs()
             AsyncImage(
