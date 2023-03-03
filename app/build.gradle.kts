@@ -1,6 +1,7 @@
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     id("rickpedia.android.application")
+    id("rickpedia.android.hilt")
 }
 
 fun generateVersionCode(minSdk: Int, major: Int, minor: Int, patch: Int): Int {
@@ -48,6 +49,7 @@ android {
 
 dependencies {
 
+    implementation(project(":feature:home"))
     implementation(project(":core:designsystem"))
     implementation(libs.androidx.core)
     implementation(libs.lifecycle.compose)
@@ -55,6 +57,7 @@ dependencies {
     implementation(libs.compose.ui)
     implementation(libs.compose.preview)
     implementation(libs.compose.material3)
+    implementation(libs.accompanist.navigation.animation)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

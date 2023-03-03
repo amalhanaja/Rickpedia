@@ -1,5 +1,4 @@
 import helper.androidTestImplementation
-import helper.api
 import helper.applyPlugins
 import helper.getLibraryProvider
 import helper.getPluginId
@@ -20,8 +19,9 @@ class AndroidFeaturePlugin : Plugin<Project> {
             libsVersionCatalog.getPluginId("hilt"),
         )
         dependencies {
-            api(project(":core:designsystem"))
-            api(project(":core:data"))
+            implementation(project(":core:designsystem"))
+            implementation(project(":core:data"))
+            implementation(project(":core:model"))
             implementation(libsVersionCatalog.getLibraryProvider("coroutine.core"))
             implementation(libsVersionCatalog.getLibraryProvider("hilt.android"))
             implementation(libsVersionCatalog.getLibraryProvider("hilt.compose.nav"))

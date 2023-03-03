@@ -40,6 +40,7 @@ compose-compiler = "1.4.0"
 compose-material = "1.4.0-beta02"
 compose-material3 = "1.1.0-alpha05"
 compose-activity = "1.6.1"
+compose-constraint-layout = "1.0.1"
 #endregion
 
 # region network
@@ -68,6 +69,7 @@ paging3-compose = "1.0.0-alpha18"
 
 secrets = "2.0.1"
 datastore = '1.0.0'
+coil = "2.2.2"
 
 [libraries]
 # region testing
@@ -101,6 +103,7 @@ compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "co
 compose-activity = { module = "androidx.activity:activity-compose", version.ref = "compose-activity" }
 compose-material = { module = "androidx.compose.material:material", version.ref = "compose-material" }
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+compose-constraint-layout = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "compose-constraint-layout" }
 compose-test-junit = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose-ui" }
 compose-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose-ui" }
 # endregion
@@ -139,16 +142,17 @@ datastore-preferences = { module = "androidx.datastore:datastore-preferences", v
 datastore-preferences-core = { module = "androidx.datastore:datastore-preferences-core", version.ref = "datastore" }
 # endregion
 
+# region accompanist
+accompanist-navigation-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist" }
+# endregion
+
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+
 # region build logic dependency
 gradle-plugin-android = { module = "com.android.tools.build:gradle", version.ref = "agp" }
 gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 gradle-plugin-ktlint = { module = "org.jlleitschuh.gradle:ktlint-gradle", version.ref = "ktlint-gradle-plugin" }
 # endregion
-
-# region accompanist
-accompanist-navigation-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist" }
-# endregion
-
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
